@@ -1,5 +1,5 @@
 /*
- * FadeInOut - jQuery plugin 1.0.0 by Anmol Saraf
+ * FadeInOut - jQuery plugin 1.0.0
  *
  * Copyright (c) 2012 Anmol Saraf
  *
@@ -10,8 +10,8 @@
  * $('.containerClass').fadeInOutByAnmolSaraf({images:["images/imgName.jpg","images/imgName1.gif","images/imgName2.png","images/imgName3.jpg"]}); 
  */
  
-$.fadeInOutByAnmolSaraf = { version: '1.0' };
-$.fn.fadeInOutByAnmolSaraf = function(options){
+$.FadeInOut = { version: '1.0' };
+$.fn.FadeInOut = function(options){
 
 	var defaults = {
 	sint : 1,
