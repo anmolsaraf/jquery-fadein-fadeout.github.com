@@ -1,5 +1,5 @@
 /*
- * anmolFadeInOut - jQuery plugin 1.0.0
+ * FadeInOut - jQuery plugin 1.0.0 by Anmol Saraf
  *
  * Copyright (c) 2012 Anmol Saraf
  *
