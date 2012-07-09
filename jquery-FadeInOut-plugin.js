@@ -29,7 +29,7 @@ $.fn.FadeInOut = function(options){
 		totalSlides = options.images.length;
 	
 	this.append('<div class="imgDivUp"><img src="'+ options.images[0] +'" alt="" /></div>\
-    <div class="imgDiv"><img src="'+ options.images[0] +'" alt="" /></div>');
+    <div class="imgDiv"><img src="'+ options.images[1] +'" alt="" /></div>');
 	
 	$('.imgDivUp').css({'display':'block','overflow':'hidden', 'position':'absolute', 'z-index':1})
 	$('.imgDiv').css({'display':'block','overflow':'hidden', 'position':'absolute', 'z-index':2})
