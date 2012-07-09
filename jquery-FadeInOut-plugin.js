@@ -7,7 +7,7 @@
  * asaraf@anmolsaraf.com
  *
  * USAGE: 
- * $('.containerClass').fadeInOutByAnmolSaraf({images:["images/imgName.jpg","images/imgName1.gif","images/imgName2.png","images/imgName3.jpg"]}); 
+ * $('.containerClass').FadeInOut({images:["images/imgName.jpg","images/imgName1.gif","images/imgName2.png","images/imgName3.jpg"]}); 
  */
  
 $.FadeInOut = { version: '1.0' };
@@ -28,8 +28,8 @@ $.fn.FadeInOut = function(options){
 		scrollInterval,
 		totalSlides = options.images.length;
 	
-	this.append('<div class="imgDivUp"><img src="images/Final_AlShaya_Promotions1.jpg" alt="" /></div>\
-    <div class="imgDiv"><img src="images/img-thumb427x427.jpg" alt="" /></div>');
+	this.append('<div class="imgDivUp"><img src="'+ options.images[0] +'" alt="" /></div>\
+    <div class="imgDiv"><img src="'+ options.images[0] +'" alt="" /></div>');
 	
 	$('.imgDivUp').css({'display':'block','overflow':'hidden', 'position':'absolute', 'z-index':1})
 	$('.imgDiv').css({'display':'block','overflow':'hidden', 'position':'absolute', 'z-index':2})
@@ -62,22 +62,7 @@ $.fn.FadeInOut = function(options){
 	function next(index) {
 		var easeType = 'easeOutBounce'
 		duration = 1200;
-		
-		switch(index) {
-			case 1:
-				fadeInOut(options.images[0], index);
-			break;
-			
-			case 2:
-				fadeInOut(options.images[1], index);
-			break;
-			case 3:
-				fadeInOut(options.images[2], index);
-			break;
-			case 4:
-				fadeInOut(options.images[3], index);
-			break;
-		}
+		fadeInOut(options.images[( index - 1 )], index);
 	}
 	
 	function startTimer() {
